@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="b64.js"></script>
+    <script src="LZWEncoder.js"></script>
+    <script src="NeuQuant.js"></script>
+    <script src="GIFEncoder.js"></script>
+    <script src="GIFtest.js"></script>
+
+    <div id="anime">
+    <img src="img/Plant1.png" width="80" />
+    <img src="img/Plant2.png" width="80" />
+    <img src="img/Plant3.png" width="80" />
+    <img src="img/Plant4.png" width="80" />
+    <img src="img/Plant5.png" width="80" />
+    <img src="img/Plant6.png" width="80" />
+    <img src="img/Plant7.png" width="80" />
+    <img src="img/Plant8.png" width="80" />
+    <img src="img/Plant9.png" width="80" />
+    </div>
+
+    <p>速度：<input type="range" id="anime_speed" value="500" min="100" max="500"></p>
+    <p><button onclick="createGIF();">アニメGIFを作成する</button></p>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <p><img id="anime_gif" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+
+    <p><button id="download" onclick="downloadGIF();" style="display:none;">ダウンロード</button></p>
+</body>
+</html>
